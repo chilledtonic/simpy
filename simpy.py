@@ -7,8 +7,8 @@ import getpass
 import pylast
 
 
-API_KEY = '25486bbdf2ddd3c19c6167b1743570d0'
-API_SECRET = 'f8e74958a3dc243574c72421448fd481'
+API_KEY = 'API_KEY'
+API_SECRET = 'API_SECRET'
 
 SCRIPTPATH = os.path.dirname(__file__)
 ROCKBOX_FILE = os.path.join(SCRIPTPATH, '.scrobbler.log')
