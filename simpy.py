@@ -6,8 +6,10 @@ from hashlib import md5
 import getpass
 import pylast
 
-API_KEY = '<API_KEY>'
-API_SECRET = '<API_SECRET>'
+
+API_KEY = '25486bbdf2ddd3c19c6167b1743570d0'
+API_SECRET = 'f8e74958a3dc243574c72421448fd481'
+
 SCRIPTPATH = os.path.dirname(__file__)
 ROCKBOX_FILE = os.path.join(SCRIPTPATH, '.scrobbler.log')
 
@@ -24,17 +26,13 @@ def parse_tags():
                                      'album':line.split('\t')[1],
                                      'title':line.split('\t')[2],
                                      'timestamp':line.split('\t')[6]}
-                
                 yield log_transcription
-                
             except:
                 print('Artist or album or something else information needed')
-        
-                
 
 
 def assignment():
-    ''' 
+    '''
     '''
     for value in parse_tags():
         artist = value['artist']
@@ -58,14 +56,11 @@ def scrobbling(username, password):
         print(artist + ' ' + album + ' ' + title + ' ' +
               datetime.datetime.fromtimestamp(int(timestamp)).strftime('%Y-%m-%d %H:%M:%S'))
         counter = counter + 1
-        
-            
+
 
     print('-'*10)
     print('Total tracks scrobbled: ', counter)
     input('Press any key to exit.')
-
-
 
 
 if __name__ == '__main__':
