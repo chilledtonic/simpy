@@ -19,7 +19,7 @@ def parse_tags():
     and returning result by yield'''
 
     log_transcription = []
-    with open(ROCKBOX_FILE, 'r+') as logfile:
+    with open(ROCKBOX_FILE, 'r') as logfile:
         for line in logfile:
             try:
                 log_transcription = {'artist':line.split('\t')[0],
