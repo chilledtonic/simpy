@@ -60,7 +60,7 @@ def scrobbling(username, password):
 
     print('-'*10)
     print('Total tracks scrobbled: ', counter)
-    input('Press any key to exit.')
+    input('Press "Enter" to exit.')
 
 
 if __name__ == '__main__':
