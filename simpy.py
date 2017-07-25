@@ -22,6 +22,7 @@ def parse_tags():
     with open(ROCKBOX_FILE, 'r') as logfile:
         for line in logfile:
             try:
+                
                 log_transcription = {'artist':line.split('\t')[0],
                                      'album':line.split('\t')[1],
                                      'title':line.split('\t')[2],
